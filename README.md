@@ -94,12 +94,17 @@ Personal_Portfolio/  <br>
 ├── server.js            # Express backend           <br>
 
 
-🧠 Notes
+## 🧠 Notes
 Works well on both desktop and mobile
 
 Secure email using environment variables
 
 Fully deployable to services like Render or Vercel (static frontend)
 
-📬 Contact
+## How to run:
+
+# Frontend: npm start
+# Backend: node server.js
+
+## 📬 Contact
 If you want to collaborate or reach out, feel free to use the Contact Form on the live site!
