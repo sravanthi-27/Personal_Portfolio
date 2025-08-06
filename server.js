@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.join(__dirname1, 'client/build')));
 
   // Serve index.html for all unknown routes (Single Page App behavior)
-  app.get('*', (req, res) => {
+  app.get('/*', (req, res) => {
     res.sendFile(path.join(__dirname1, 'client', 'build', 'index.html'));
   });
 }
