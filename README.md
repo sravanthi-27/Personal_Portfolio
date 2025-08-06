@@ -22,15 +22,15 @@ It showcases my work, skills, and includes a contact form that sends emails dire
 
 ## 📱 Mobile View
 
-<img src="<img width="540" height="1206" alt="image" src="https://github.com/user-attachments/assets/6809a0d4-3843-44c8-a69b-af945bdb9aac" />
-" alt="Mobile view" width="300"/>
+https://github.com/user-attachments/assets/6809a0d4-3843-44c8-a69b-af945bdb9aac
+
 
 ---
 
 ## 💻 Desktop View
 
-<img src="<img width="1915" height="963" alt="Screenshot 2025-08-07 035618" src="https://github.com/user-attachments/assets/143fe376-fffc-4258-91ac-5134c1f7037b" />
-" alt="Desktop view" width="700"/>
+https://github.com/user-attachments/assets/143fe376-fffc-4258-91ac-5134c1f7037b 
+
 
 ---
 
@@ -53,7 +53,7 @@ It showcases my work, skills, and includes a contact form that sends emails dire
 
 ### 1. Clone the Repository
 
-git clone https://github.com/sravanthi-27/Personal_Portfolio.git
+git clone https://github.com/sravanthi-27/Personal_Portfolio.git  <br>
 cd Personal_Portfolio
 
 ## 2. Backend Setup
@@ -62,19 +62,19 @@ npm install
 
 ## 3. Frontend Setup
 
-cd client
-npm install
-npm run build
-cd ..
-
+cd client             <br>
+npm install           <br>
+npm run build         <br>
+cd ..                 <br>
+                 
 
 ## 4. Environment Variables
 
 Create a .env file in the root directory and add:
 
-EMAIL_USER=your-gmail@gmail.com
-EMAIL_PASS=your-app-password
-NODE_ENV=production
+EMAIL_USER=your-gmail@gmail.com   <br>
+EMAIL_PASS=your-app-password      <br>
+NODE_ENV=production               <br>
 
 💡 Use Gmail App Passwords instead of your actual password.
 
@@ -85,12 +85,12 @@ node server.js
 
 📁 Folder Structure
 
-Personal_Portfolio/
-├── client/              # React frontend
-├── controllers/         # Nodemailer logic
-├── routes/              # API routes (email)
-├── .env                 # Environment config
-├── server.js            # Express backend
+Personal_Portfolio/  <br>
+├── client/              # React frontend            <br>
+├── controllers/         # Nodemailer logic          <br>
+├── routes/              # API routes (email)        <br>
+├── .env                 # Environment config        <br>
+├── server.js            # Express backend           <br>
 
 
 🧠 Notes
