@@ -1,11 +1,10 @@
-const express = require('express')
-const { sendEmailController } = require('../controllers/portfolioController')
+// routes/portfolioRoute.js
 
-//router object
-const router = express.Router()
+const express = require('express');
+const { sendEmailController } = require('../controllers/portfolioController');
 
-//routes
+const router = express.Router();
+
 router.post('/sendEmail', sendEmailController);
 
-// /export
-module.exports = router
+module.exports = router;

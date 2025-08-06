@@ -1,14 +1,14 @@
 // controllers/portfolioController.js
+
 const nodemailer = require('nodemailer');
 const dotenv = require('dotenv');
 dotenv.config();
 
-// Gmail transport
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
-    user: process.env.EMAIL_USER, // your Gmail
-    pass: process.env.EMAIL_PASS  // your Gmail App Password
+    user: process.env.EMAIL_USER,   // your Gmail address
+    pass: process.env.EMAIL_PASS    // Gmail App Password (not your actual Gmail password)
   }
 });
 
@@ -16,38 +16,34 @@ const sendEmailController = async (req, res) => {
   try {
     const { name, email, msg } = req.body;
 
-    // validation
     if (!name || !email || !msg) {
       return res.status(400).send({
         success: false,
-        message: "Please Provide All Fields"
+        message: "Please provide all fields"
       });
     }
 
-    // send mail
     await transporter.sendMail({
       to: process.env.EMAIL_USER,
       from: process.env.EMAIL_USER,
-      subject: "Regarding MERN Portfolio App",
+      subject: "New Message from Portfolio",
       html: `
-        <h5>Contact Details</h5>
-        <ul>
-          <li><strong>Name:</strong> ${name}</li> <br/>
-          <li><strong>Email:</strong> ${email}</li> <br/>
-          <li><strong>Message:</strong> ${msg}</li> <br/>
-        </ul>
+        <h4>Contact Details</h4>
+        <p><strong>Name:</strong> ${name}</p>
+        <p><strong>Email:</strong> ${email}</p>
+        <p><strong>Message:</strong><br/>${msg}</p>
       `
     });
 
     res.status(200).send({
       success: true,
-      message: "Your Message Sent Successfully"
+      message: "Your message was sent successfully!"
     });
   } catch (error) {
-    console.error("Email send error:", error);
+    console.error("Email sending error:", error);
     res.status(500).send({
       success: false,
-      message: "Send Email API Error",
+      message: "Something went wrong while sending the email.",
       error: error.message
     });
   }

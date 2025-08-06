@@ -1,4 +1,5 @@
-// Import modules
+// server.js
+
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
@@ -18,23 +19,18 @@ app.use(express.json());
 app.use('/api/v1/portfolio', require('./routes/portfolioRoute'));
 
 // -------------------- Deployment Setup --------------------
-const __dirname1 = path.resolve(); // For correct directory resolution
+const __dirname1 = path.resolve(); // Safe to use custom dirname var
 
-if (process.env.NODE_ENV === 'production') {
-  // Serve frontend static files
-  app.use(express.static(path.join(__dirname1, 'client/build')));
+app.use(express.static(path.join(__dirname1, '/client/build')));
 
-  // Serve index.html for all unknown routes (Single Page App behavior)
-  app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname1, 'client', 'build', 'index.html'));
-  });
-}
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname1, 'client', 'build', 'index.html'));
+});
 // -----------------------------------------------------------
 
 // Port
 const PORT = process.env.PORT || 8080;
 
-// Start server
 app.listen(PORT, () => {
   console.log(`Server Running on PORT ${PORT}`);
 });
