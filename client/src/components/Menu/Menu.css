@@ -1,0 +1,38 @@
+.navbar-profile-pic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.navbar-profile-pic img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;          /* Makes it circular */
+  object-fit: cover;           /* Crops image to fit */
+  border: 3px solid #f29f67;   /* Optional orange border */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.nav-items{
+    color: white;
+    margin-top: 30px;
+    /*text-align: center;*/
+    margin-left: 25px;
+}
+.nav-link{
+    margin-top: 20px;
+    cursor: pointer;
+}
+.nav-link svg{
+    margin-right: 10px;
+}
+.nav-link:hover{
+    color: #f29f67;
+}
+.nav-link .active{
+  color: #f29f67;
+  border-left: 5px solid #f29f67;
+  padding-left: 10px;
+  text-decoration: none;
+}
