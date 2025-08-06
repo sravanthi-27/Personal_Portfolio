@@ -22,14 +22,15 @@ It showcases my work, skills, and includes a contact form that sends emails dire
 
 ## 📱 Mobile View
 
-https://github.com/user-attachments/assets/6809a0d4-3843-44c8-a69b-af945bdb9aac
+<img width="540" height="1206" alt="image" src="https://github.com/user-attachments/assets/69c15a37-8560-4343-a720-3e2d449918fa" />
+
 
 
 ---
 
 ## 💻 Desktop View
 
-https://github.com/user-attachments/assets/143fe376-fffc-4258-91ac-5134c1f7037b 
+<img width="1915" height="963" alt="Screenshot 2025-08-07 035618" src="https://github.com/user-attachments/assets/a7958633-3483-4ea4-b786-bf4d15dad54d" />
 
 
 ---
